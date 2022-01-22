@@ -291,6 +291,7 @@
                 padding:30px 0 0;
                 text-align:inherit;
             }
+            /* Move out of media */
             .footer-bottom .site-logo img,
             .footer-bottom .svg-logo {
                 display:block;
