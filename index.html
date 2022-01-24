@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allura&display=swap"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&display=swap"/>
+        <link rel="icon" href="images/bb-icon.png"/>
         
     </head> 
     <body>
@@ -27,7 +28,7 @@
 
                     <div class="member-widget">
                         <ul class="login-links">
-                            <li><a href="#"><i class="fa fa-address-card"></i> Baby Registry</a></li>
+                            <li><a href="#"><i class="fa fa-book"></i> Baby Registry</a></li>
                             <li><a href="#"><i class="fa fa-sign-in"></i> Login/Register</a></li>
                             <li class="member-widget__cart">
                                 <a href="#">
@@ -72,8 +73,8 @@
 
                     <div class="member-widget">
                         <ul class="login-links">
-                            <li><a href="#">Baby Registry</a></li>
-                            <li><a href="#">Login/Register</a></li>
+                            <li><a href="#"><i class="fa fa-book"></i> Baby Registry</a></li>
+                            <li><a href="#"><i class="fa fa-sign-in"></i> Login/Register</a></li>
                             <li class="member-widget__cart">
                                 <a href="#">
                                     <span class="member-widget__item-count">5 items</span> Check out <strong>$ 2103.92</strong>
@@ -119,7 +120,7 @@
             </header>
             <main class="page-main">
 
-                <div class="slideshow">
+                <div class="slideshow fade">
                     <section class="slideshow__slide slide">
                         <figure class="slide__bg">
                             <img src="images/bb-slideshow-example-1.jpg" />
@@ -129,11 +130,44 @@
                             <a href="#" class="cta">
                                 <h2 class="cta__title">Crib Bedding Sale</h2>
                                 <p class="cta__description">Save up to 50% off on select crib bedding now through Memorial Day!</p>
-                                <span class="button button--primary">Shop Crib Beding</span>
+                                <span class="button button--primary">Shop Crib Bedding</span>
                             </a>
                         </div>
                     </section>
                     <!-- need another slide and to setup slideshow functioanlity -->
+                </div>
+                <div class="slideshow fade">
+                    <section class="slideshow__slide slide">
+                        <figure class="slide__bg">
+                            <img src="images/bb-slideshow-example-2.jpg" />
+                        </figure>
+                        <div class="slide__content2">
+                            <a href="#" class="cta">
+                                <h2 class="cta__title">Free Shipping Sitewide</h2>
+                                <p class="cta__description">On all orders over $50. Use Discount Code: BB2022 at checkout.</p>
+                                <span class="button button--primary">Shop Featured Products</span>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+                <div class="slideshow fade">
+                    <section class="slideshow__slide slide">
+                        <figure class="slide__bg">
+                            <img src="images/bb-slideshow-example-3.jpg" />
+                        </figure>
+                        <div class="slide__content">
+                            <a href="#" class="cta">
+                                <h2 class="cta__title">Baby Apparel Clearance</h2>
+                                <p class="cta__description">Keep your baby fashionably dressed for less and save up to 70% on select apparels.</p>
+                                <span class="button button--primary">Shop Baby Apparels</span>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+                <div class="indicator">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
 
                 <section class="featured-widget">
@@ -234,9 +268,9 @@
                     <div class="page-footer__column">
                         <div class="wysiwyg">
                             <h2>Contact Us</h2>
-                            <p><strong>Beautiful Beginnings</strong><br/>4472 Lawn Avenue<br/>Western Springs, IL, 60558</p>
-                            <p>708.246.1212</p>
-                            <p><strong>Store Hours</strong><br/>Monday - Friday 10am-5:30pm<br/>Saturday - 10am - 5pm<br/>Sunday - Closed</p>
+                            <p><strong>Beautiful Beginnings</strong><br/><i class="fa fa-address-card"></i> 4472 Lawn Avenue<br/>Western Springs, IL, 60558</p>
+                            <p><strong>Contact Us:</strong><br/><i class="fa fa-phone"></i> <a href="tel:7082461212">708.246.1212</a><br/><i class="fa fa-envelope"></i> <a href = "mailto: cs@bb.com">cs@bb.com</a></p>
+                            <p><strong>Store Hours:</strong><br/><i class="fa fa-clock-o"></i> Monday - Friday 10am-5:30pm<br/><i class="fa fa-clock-o"></i> Saturday - 10am - 5pm<br/><i class="fa fa-clock-o"></i> Sunday - Closed</p>
                         </div>
                     </div>
 
