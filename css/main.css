@@ -69,7 +69,7 @@
     @media (max-width:64em) {
         .page-wrap {
             overflow-x: hidden;
-            overflow-y: auto;
+            overflow-y: hidden;
             position: relative;
             max-width: 100%;
         }
@@ -102,7 +102,6 @@
         .header-top .contact-box .button { display:none; }
 
         .header-middle { 
-            position:relative;
             z-index:5;
             padding:7px 0 18px; 
         }
@@ -220,7 +219,7 @@
 
     /*----- FOOTER -----*/
         .page-footer { position:relative; }
-        .page-footer:before { /**/
+        .page-footer:before { 
             content:" ";
             position:absolute;
             z-index:10;
@@ -270,7 +269,6 @@
             background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 15%,rgba(255,255,255,0) 85%,rgba(255,255,255,1) 100%), linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 10%,rgba(255,255,255,0) 100%), linear-gradient(-135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 10%,rgba(255,255,255,0) 100%);
         }
 
-        /*max-width:224px;*/
         .footer-top .page-footer__column { width: 100% } 
 
         .page-footer__column h2,
@@ -284,35 +282,48 @@
             font-weight:bold;
             text-transform:uppercase;
         }
-
         .footer-bottom p {
             margin:0 0 .8em;
             color:#999;
         }
 
-        @media (min-width:64em) {
+        @media (min-width:63.9em) {
             .footer-top {
                 margin:0 -40px;
                 padding:0 40px 25px;
             }
             .footer-top h2 + p { margin-top:.8em; }
             .footer-top p { line-height:1.6; }
-
             .footer-bottom {
                 padding:30px 0 0;
                 text-align:inherit;
+                position: absolute;
             }
+            
             .footer-bottom .site-logo img,
             .footer-bottom .svg-logo {
-                display:block;
-                margin:0 auto;
+                display: block;
+                margin-left: 140px;
+                margin-right: auto;
                 width:222px;
                 height:42px;
             }
         }
 
-        @media (max-width:63.9em) {
-            .footer-bottom { display: none; }
+        @media (max-width:64em) {
+            .footer-bottom { 
+                padding: 20px 0px;
+                display: inline-block;
+                vertical-align: top;
+                width: 100vw;
+                text-align: center;
+                overflow-x: auto;
+                overflow-y: auto;
+            }
+            .footer-bottom .site-logo img { 
+                width:222px;
+                height:42px;
+            }
             .footer-bottom-mobile { display: block; }
             .footer-bottom-mobile .site-logo img {
                 width: 100%;        
@@ -342,9 +353,6 @@
                 overflow: hidden;
                 transition: max-height 0.4s ease-out;
             }
-        }
-
-        @media (max-width:64em) {
             .wysiwyg p {
                 display: inline-block;
                 vertical-align: top;
@@ -552,23 +560,46 @@
             padding-left: 1em;
         }
 
-        .header-toggles--mobile { color:#000; }
+        .header-toggles--mobile { color:#000; } 
         .header-toggles--mobile a { 
             display:inline-block;
-            margin-left:5px;
             vertical-align:middle;
+            padding-left: 10px;
         }
 
         .header-toggles--mobile .svg-icon {
             display:block;
             font-size:24px;
         }
+        .header-toggles--mobile img:hover,
+        .header-toggles--mobile .dropdown-content a:hover {
+            background-color: #ddd;
+        }
 
-        .menu-toggle {
+        .menu-toggle { 
             display:inline-block;
             position:relative;
             width:32px;
             height:28px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            text-align: right;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            border-bottom: 1px solid #e6e6e6;
+            display: block;
+        }
+        .show {
+            display: block;
         }
 
         @media (min-width:64em) {
@@ -649,11 +680,6 @@
             -webkit-box-shadow:inset 0 0 0 1px #f0f0f0;
                     box-shadow:inset 0 0 0 1px #f0f0f0; 
         }
-        /* @media (max-width:1025px){
-            .slide__bg {
-                background: none;
-            }
-        } */
 
         .slide__bg img { 
             display:block; 

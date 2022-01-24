@@ -1,3 +1,8 @@
+// HAMBURGER MENU TOGGLE
+function menuToggle() {
+  document.getElementById("navbar").classList.toggle("show");
+}
+
 // SLIDESHOW
 let slideIndex = 0;
 showSlides();
