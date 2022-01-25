@@ -15,6 +15,7 @@ Description: Assessment Summary
     - Added meta tags such as viewports, descriptions, and keywords
     - For search engine to index the webpage, I removed...
         <meta name="robots" content="noindex, nofollow"/>
+    - Accessability by adding 'alt' attributes on every img tags
 
 3. Interactive pieces & additional components:
     - Automatic slideshow with manual dot indicators
