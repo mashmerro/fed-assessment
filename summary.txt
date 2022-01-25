@@ -1,12 +1,31 @@
 Author: Meryl Santiago
 Description: Assessment Summary
 
-1. Declared the DOCTYPE so that it lets the browser know to use HTML5 and makes sure it is parsed the same way in different web browsers.
-2. Added meta viewports for responsive design to look good on all devices
-3. Added meta descriptions and keywords for improved SEO.
+1. For faster page speed:
+    - To compress files as much as possible, I used an App called Prepros to minify...
+        + CSS & JS file
+        + Optimized larger image files
+    - To fetch font files faster, I included...
+        + <link rel="preload" as="font">
+    - When using the font-awesome library, I used a CDN, which is group of server to shorten the distance of travel between the server and the user.
+    - Declared the DOCTYPE so that it lets the browser know to use HTML5 and makes sure it is parsed the same way in different web browsers.
+
+2. To improve SEO:
+    - Made the web page load faster
+    - Added meta tags such as viewports, descriptions, and keywords
+    - For search engine to index the webpage, I removed...
+        <meta name="robots" content="noindex, nofollow"/>
+
+3. Interactive pieces & additional components:
+    - Automatic slideshow with manual dot indicators
+    - Hovering on Featured products highlights the product 
+    - Hamburger menu toggles footer header titles
+    - Accordion on the footer headers
+    - Added a favicon for browser tabs closely related to the website which was downloaded from google images
+    - Clickable phone and email under 'Contact Us' will allow the users to call and email directly
 
 Font: 
-    - Since Allura and Alex Brush are not part of the default HTML fonts, I utilized the Google Font API by embedding the respective fonts in the head element.
+    - Utilized the Google Font API by embedding the respective fonts in the head element since Allura and Alex Brush are not part of the default HTML fonts.
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allura&display=swap"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&display=swap"/>
 
@@ -29,26 +48,35 @@ Navigation:
     - To open up the bottom footer areas (such as the About, Service, Shop, and Contact) through the hamburger menu toggle in smaller devices, I added an HTML list, styled it through CSS, and added a JS functionality so that when the hamburger menu is toggled, the dropdown will show up.
 
 Slideshow:
-    - Since there was no additional slides from the 'images' folder to use for the slider function, I downloaded some images from Google and scaled it similar to the default image. Three images is usually a good minimum to showcase for the slideshow.
+    - Since there was no additional image slides from the 'images' folder, I downloaded some images from Google and scaled it similar to the default image. Three images is usually a good minimum to showcase different products for the slideshow.
     - Some CSS styles that I added/ improved (some included from the PSD files) are:
         + Border outline inside the slideshow image
         + White background with linear opacity gradient for the slide content
         + For responsiveness and better viewing, I hid the slideshow on viewports less than 900px.
         + Fixed the right black border on the slides when shrinking the viewport.
-    - I set up the slide functionality in 'main.js' and I figured it would be best to have it on an automatic slideshow, changing every 5 seconds.
-        + Additionally, I've included the dot indicators to show the current slide. It has pink indicators that complements the website's design. You can also manually switch between slides through the dot indicators.
+    - I set up the slide functionality in 'main.js' and I figured it would be best to have it on an automatic slideshow, rotating every 5 seconds.
+        + Additionally, I've included the dot indicators to show the current slide. You can also manually switch between slides through the dot indicators.
 
 Footer:
-    - 
-    - Changed the social media links to logos that were included in the 'images' folder. Styled it up to line horizontally and spaced out.
-    - I've included the accordion functionality in the js file. When the user clicks the header or '+' sign, it will maximize the content. Vice versa with '-' will minimize the content.
-    - Fixed the bottom footer on the desktop viewport but could not fix it on smaller viewports.
+    - Responsive styles for the footer includes:
+        + Footer top headers turns into an accordion.
+        + The rest of the footer becomes vertically centered.
+    - Changed the social media links to image logos that were included in the 'images' folder. Styled it up to line horizontally and spaced out.
+    - Included the accordion functionality in the js file. When the user clicks the header or '+' sign, it will maximize the content and show the sub-menu. Vice versa with '-' will minimize the content.
+    - Fixed the bottom footer copyright and site logo on the desktop viewport but could not fix it on smaller viewports.
 
 Responsive:
-    - 
+    - Fixed the site to switch to mobile styles by including the meta viewport in the head tag.
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    - Removed the scrollbar in smaller screens with CSS styles.
+    - Did not get to add anything in the tablet portrait mode.
 
-Not in the scope but added:
-    - Added a favicon for browser tabs closely related to the website which was downloaded from google images.
-    - Hovering over featured products will highlight it with pink as an accent color
 
 Future Improvements:
+    - Adding more content to the tablet mode and adjusting the bottom footer on smaller viewports
+    - Allura and Alex Brush are in cursive so some users might not be able to read it
+    - Even though the website is catered for families or moms, font should not be too sophisticated since it's a website for babies
+    - Grid table for featured products
+    - More modern animation such as hamburger menu toggle 
+    - Full sized content that takes up the whole page similar to modern websites instead of a page wrap 
+    - Utilize more of the website's pastel color scheme such as blue, green, and yellow
